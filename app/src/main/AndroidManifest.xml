@@ -28,7 +28,16 @@
                 <data android:mimeType="*/*"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SelectionActivity"/>
+        <!--android:label of your Activity will show up as the action in the text selection toolbar-->
+        <activity
+            android:name=".SelectionActivity"
+            android:label="@string/text_selection_toolbar_title">
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
 
         <!--
       accessibility_service_description是有关这个服务的功能说明，accessibility_service_label是服务的名称，

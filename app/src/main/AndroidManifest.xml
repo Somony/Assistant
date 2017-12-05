@@ -16,14 +16,19 @@
                 <action android:name="android.intent.action.ASSIST"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
-            <meta-data android:name="com.android.systemui.action_assist_icon" android:resource="@mipmap/ic_launcher"/>
+            <meta-data
+                android:name="com.android.systemui.action_assist_icon"
+                android:resource="@mipmap/ic_launcher"/>
             <intent-filter>
                 <action android:name="android.intent.action.GET_CONTENT"/>
+
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.OPENABLE"/>
+
                 <data android:mimeType="*/*"/>
             </intent-filter>
         </activity>
+        <activity android:name=".SelectionActivity"/>
 
         <!--
       accessibility_service_description是有关这个服务的功能说明，accessibility_service_label是服务的名称，

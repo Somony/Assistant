@@ -5,6 +5,7 @@
  - 自定义辅助应用，长按home键跳转到浏览器
  - AccessibilityService实现自动安装和卸载
  - 自定义的文本选择布局和功能
+   - 保存复制的文字到evernote
  
 暂未实现：
 

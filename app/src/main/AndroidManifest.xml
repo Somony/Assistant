@@ -31,7 +31,8 @@
         <!--android:label of your Activity will show up as the action in the text selection toolbar-->
         <activity
             android:name=".SelectionActivity"
-            android:label="@string/text_selection_toolbar_title">
+            android:label="@string/text_selection_toolbar_title"
+            android:theme="@style/Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT"/>
                 <category android:name="android.intent.category.DEFAULT"/>

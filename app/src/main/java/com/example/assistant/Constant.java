@@ -24,4 +24,8 @@ public class Constant {
         public static String appRemovedAction = Intent.ACTION_PACKAGE_REMOVED;
     }
     
+    public static class NoteInfo{
+        public static final int REQ_PICK_NOTE = 200;
+    }
+    
 }

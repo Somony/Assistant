@@ -62,7 +62,7 @@ public class DialogUtils {
         
         if (textArray.length == 1) {
             tvSimpleDialogTitle.setText(textArray[0]);
-            tvSimpleDialogTitle.setPadding(0, DisplayUtil.dip2px(context, 13), 0, DisplayUtil.dip2px(context, 13));
+            tvSimpleDialogTitle.setPadding(0, DisplayUtil.dp2px(context, 13), 0, DisplayUtil.dp2px(context, 13));
             tvSimpleDialogContent.setVisibility(View.GONE);
         } else if (textArray.length == 2) {
             tvSimpleDialogTitle.setText(textArray[0]);
@@ -87,7 +87,7 @@ public class DialogUtils {
         simpleDialog.show();
         Window window = simpleDialog.getWindow();
         WindowManager.LayoutParams lp = window.getAttributes();
-        lp.width = DisplayUtil.dip2px(context, 270);
+        lp.width = DisplayUtil.dp2px(context, 270);
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
         lp.gravity = Gravity.CENTER;
         window.setAttributes(lp);
@@ -122,6 +122,13 @@ public class DialogUtils {
     }
     
     public interface OnBtnClickListener {
+        /**
+         * 点击事件
+         * R.id.btn_left
+         * R.id.btn_right
+         *
+         * @param v
+         */
         void onBtnClick(View v);
     }
 }

@@ -4,29 +4,31 @@ import android.content.Intent;
 
 import com.evernote.android.intent.EvernoteIntent;
 import com.example.assistant.Constant;
-import com.example.assistant.SelectionActivity;
+import com.example.assistant.activity.SelectionActivity;
 import com.example.assistant.callback.ViewCallBack;
 
 /**
- * @author 作者：LHC
- * @date 创建时间：2018/1/5
+ * @author 作者：somon
+ * @date 创建时间：2018/1/8
  * @corporation 公司：anerfa
  * @desception
  */
 
 public class NotePresenter {
-    private SelectionActivity context;
+    private SelectionActivity mActivity;
+    private ViewCallBack context;
     private String mNoteGuid = "";
     
     public NotePresenter(ViewCallBack context) {
-        this.context = (SelectionActivity) context;
+        this.context = context;
+        mActivity = (SelectionActivity) context;
     }
     
     /**
      * 查询所有的evernote笔记
      */
     public void chooseExist() {
-        context.startActivityForResult(EvernoteIntent.pickNote().create(), Constant.NoteInfo.REQ_PICK_NOTE);
+        mActivity.startActivityForResult(EvernoteIntent.pickNote().create(), Constant.NoteInfo.REQ_PICK_NOTE);
     }
     
     /**
@@ -47,7 +49,7 @@ public class NotePresenter {
                 .setFullScreen(true)
                 .create();
         
-        context.startActivity(intent);
+        mActivity.startActivity(intent);
     }
     
     /**
@@ -59,6 +61,6 @@ public class NotePresenter {
                 .setTextPlain(content)
                 .create();
         
-        context.startActivity(intent);
+        mActivity.startActivity(intent);
     }
 }

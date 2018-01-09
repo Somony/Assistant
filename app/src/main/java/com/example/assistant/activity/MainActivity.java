@@ -1,4 +1,4 @@
-package com.example.assistant;
+package com.example.assistant.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,6 +7,8 @@ import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 
+import com.example.assistant.R;
+import com.example.assistant.callback.ViewCallBack;
 import com.example.assistant.services.MyAccessibilityServices;
 import com.example.assistant.utils.AssistUtils;
 
@@ -15,7 +17,7 @@ import com.example.assistant.utils.AssistUtils;
  * @date 创建时间：2017/12/5
  * @desception
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ViewCallBack {
     
     private String TAG = "MainActivity";
     
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         if (getIntent() != null) {
             String action = getIntent().getAction();
-            if (!TextUtils.isEmpty(action))
+            if (!TextUtils.isEmpty(action)) {
                 switch (action) {
                     case Intent.ACTION_ASSIST:
                         redirectToBrowser();
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         break;
                 }
+            }
+            
         }
     }
     

@@ -8,4 +8,5 @@ package com.example.assistant.callback;
  */
 
 public interface ViewCallBack {
+
 }

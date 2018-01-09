@@ -1,4 +1,4 @@
-package com.example.assistant;
+package com.example.assistant.activity;
 
 import android.content.Intent;
 import android.os.Build;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.evernote.android.intent.EvernoteIntentResult;
+import com.example.assistant.Constant;
+import com.example.assistant.R;
 import com.example.assistant.callback.ViewCallBack;
 import com.example.assistant.presenter.NotePresenter;
 import com.example.assistant.utils.ClipUtils;
@@ -17,7 +19,7 @@ import com.example.assistant.utils.ClipUtils;
  * @date 创建时间：2017/12/4
  * @desception 自定义的选择布局会出现在别的app的选择框中
  * 显示的title是app名
- * 点击自定义的布局就会跳到本页面中来，使用的是startaAtivityForResult
+ * 点击自定义的布局就会跳到本页面中来，使用的是statActivityForResult
  * 那么在返回的时候可以带数据回上个页面
  */
 public class SelectionActivity extends AppCompatActivity implements ViewCallBack {
@@ -67,7 +69,6 @@ public class SelectionActivity extends AppCompatActivity implements ViewCallBack
                     String noteGuid = EvernoteIntentResult.getNoteGuid(data);
                     mPresenter.getNoteGuid(noteGuid);
                     mPresenter.viewNote();
-                    //7a976065-f215-4c31-815b-6bcf282bbb5f
                 }
                 break;
             default:

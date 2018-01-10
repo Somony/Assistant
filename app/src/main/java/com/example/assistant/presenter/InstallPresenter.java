@@ -19,6 +19,7 @@ import java.util.List;
  * @date 创建时间：2018/1/8
  * @corporation 公司：anerfa
  * @desception 辅助服务安装和卸载
+ * 包名：com.android.packageinstaller,com.google.android.packageinstaller,com.sonyericsson.home
  */
 
 public class InstallPresenter {

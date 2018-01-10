@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Assistant</string>
-    <string name="accessibility_service_description">服务包括apk自动安装,点击卸载后自动卸载(对于sony），下一步：准备红包助手，二维码扫描后自动使用浏览器打开</string>
+    <string name="accessibility_service_description">服务包括apk自动安装;点击卸载后自动卸载(对于sony）;二维码扫描后自动打开，下一步：准备红包助手</string>
     <string name="accessibility_service_label">辅助操作 — 沃镃基谢德</string>
     <string name="text_selection_toolbar_title">assist</string>
 

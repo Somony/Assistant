@@ -24,8 +24,15 @@ public class Constant {
         public static String appRemovedAction = Intent.ACTION_PACKAGE_REMOVED;
     }
     
-    public static class NoteInfo{
-        public static final int REQ_PICK_NOTE = 200;
+    /**
+     * id可以通过ddms dump view hierarchy功能获得
+     */
+    public static class QRCodeConstant {
+        public static String linkUrlId = "mark.qrcode:id/p";
+        public static String linkBtnId = "mark.qrcode:id/q";
     }
     
+    public static class NoteInfo {
+        public static final int REQ_PICK_NOTE = 200;
+    }
 }

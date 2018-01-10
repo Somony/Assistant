@@ -6,6 +6,7 @@ import android.view.accessibility.AccessibilityEvent;
 
 import com.example.assistant.callback.ViewCallBack;
 import com.example.assistant.presenter.InstallPresenter;
+import com.example.assistant.presenter.QRCodePresenter;
 
 /**
  * @author 作者：Somon
@@ -15,6 +16,7 @@ import com.example.assistant.presenter.InstallPresenter;
 public class MyAccessibilityServices extends AccessibilityService implements ViewCallBack {
     private String tag = "MyAccessibilityServices";
     private InstallPresenter mInstallPresenter = new InstallPresenter(this);
+    private QRCodePresenter mQRCodePresnenter = new QRCodePresenter(this);
     
     /**
      * 初始化操作
@@ -59,7 +61,10 @@ public class MyAccessibilityServices extends AccessibilityService implements Vie
             mInstallPresenter.autoInstall(event);
         } else if (event.getPackageName().toString().contains("com.sonyericsson.home")) {
             mInstallPresenter.autoRemoved(event);
+        }else if(event.getPackageName().toString().contains("mark.qrcode")){
+            mQRCodePresnenter.autoOpenBrowser(event);
         }
+        
     }
     
     @Override
